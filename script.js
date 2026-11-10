@@ -187,7 +187,7 @@ contactForm.addEventListener('submit', async (e) => {
   formStatus.className = 'form-note';
 
   // jab tak YOUR_FORM_ID nahi badli, form connected nahi hai
-  if (contactForm.action.includes('mjyynraq')) {
+  if (contactForm.action.includes('mppdazao')) {
     formStatus.textContent = 'Change your form action URL to your Formspree form ID in the HTML.';
     formStatus.classList.add('err');
     return;
