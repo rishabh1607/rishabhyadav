@@ -187,8 +187,8 @@ contactForm.addEventListener('submit', async (e) => {
   formStatus.className = 'form-note';
 
   // jab tak YOUR_FORM_ID nahi badli, form connected nahi hai
-  if (contactForm.action.includes('YOUR_FORM_ID')) {
-    formStatus.textContent = 'Form abhi connected nahi hai. index.html me YOUR_FORM_ID badlo.';
+  if (contactForm.action.includes('mjyynraq')) {
+    formStatus.textContent = 'Change your form action URL to your Formspree form ID in the HTML.';
     formStatus.classList.add('err');
     return;
   }
@@ -205,13 +205,13 @@ contactForm.addEventListener('submit', async (e) => {
     });
     if (response.ok) {
       contactForm.reset();
-      formStatus.textContent = 'Message bhej diya gaya. Thank you!';
+      formStatus.textContent = Message is sent successfully. I will get back to you soon.';
       formStatus.classList.add('ok');
     } else {
       throw new Error('Request failed');
     }
   } catch (error) {
-    formStatus.textContent = 'Message nahi ja paya. Thodi der baad dobara try karo.';
+    formStatus.textContent = 'Message could not be sent. Please try again later.';
     formStatus.classList.add('err');
   } finally {
     button.disabled = false;
